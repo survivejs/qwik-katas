@@ -8,8 +8,9 @@ The repository contains [katas](katas/) and [solutions](solutions/). Each kata c
 
 1. [Kata 1 - Getting started](katas/kata-01.md) - [Solution](solutions/kata-01)
 2. [Kata 2 - State management](katas/kata-02.md) - [Solution](solutions/kata-02)
-3. [Kata 3 - Lifecycle](katas/kata-03.md) - [Solution](solutions/kata-03)
-4. [Kata 4 - Routing](katas/kata-04.md) - [Solution](solutions/kata-04)
+2. [Kata 3 - Actions and loaders](katas/kata-03.md) - [Solution](solutions/kata-03)
+3. [Kata 4 - Lifecycle](katas/kata-04.md) - [Solution](solutions/kata-04)
+4. [Kata 5 - Routing](katas/kata-05.md) - [Solution](solutions/kata-05)
 
 ## Prerequisites
 
