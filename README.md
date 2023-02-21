@@ -2,9 +2,7 @@
 
 [Qwik](https://qwik.builder.io/) is what we might call a disappearing web framework. The design aim of the framework is to ship as little JavaScript code as efficiently as possible. In other words, JavaScript should not be loaded unless it is strictly needed. That said, you as a developer have some amount of control over the process. For those that know frameworks like React, Qwik is doing **code splitting** out of the box in a granular manner and you don't have to worry about it. [Qwik City](https://qwik.builder.io/qwikcity/overview/) ("Next.js" of Qwik) provides nice and simple ways to interact with a backend though a rpc-style interface not to mention many other features.
 
-These Qwik katas have been adapted from [red-gate/web-kata](https://github.com/red-gate/web-kata) and they have been planned with kata type of workshops in mind. Ideally you would work with a pair but you can complete these alone as well. The point is to get used to the related tooling and the ideas behind Qwik so that you are comfortable building something yourself with it.
-
-The repository contains `katas` and `solutions`. Each kata comes with a brief description for learning aims, background information, and a task to perform. The katas have been designed to form a continuum so make sure to start from the first one and complete them in a successive manner. Each kata is fairly simple and the goal is to teach a concept per kata to avoid overwhelming anyone.
+The repository contains [katas](katas/) and [solutions](solutions/). Each kata comes with a brief description for learning aims, background information, and a task to perform. The katas have been designed to form a continuum so make sure to start from the first one and complete them in a successive manner. Each kata is fairly simple and the goal is to teach a concept per kata to avoid overwhelming anyone.
 
 ## Katas
 
@@ -26,3 +24,7 @@ To be able to complete the katas, you need the following:
 
 * [Qwik site](https://qwik.builder.io/)
 * [Qwik City site](https://qwik.builder.io/qwikcity/overview)
+
+## Credits
+
+These Qwik katas have been adapted from [red-gate/web-kata](https://github.com/red-gate/web-kata).
