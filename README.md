@@ -6,11 +6,10 @@ The repository contains [katas](katas/) and [solutions](solutions/). Each kata c
 
 ## Katas
 
-1. [Kata 1 - Introduction to Qwik](katas/kata-01.md) - [Solution](solutions/kata-01)
-2. [Kata 2 - Add and remove objects](katas/kata-02.md) - [Solution](solutions/kata-02)
-3. [Kata 3 - Filter, show and hide objects](katas/kata-03.md) - [Solution](solutions/kata-03)
-4. [Kata 4 - Add router to an app](katas/kata-04.md) - [Solution](solutions/kata-04)
-5. [Kata 5 - Interaction with backend server through REST API calls](katas/kata-05.md) - [Solution](solutions/kata-05)
+1. [Kata 1 - Getting started](katas/kata-01.md) - [Solution](solutions/kata-01)
+2. [Kata 2 - State management](katas/kata-02.md) - [Solution](solutions/kata-02)
+3. [Kata 3 - Lifecycle](katas/kata-03.md) - [Solution](solutions/kata-03)
+4. [Kata 4 - Routing](katas/kata-04.md) - [Solution](solutions/kata-04)
 
 ## Prerequisites
 
