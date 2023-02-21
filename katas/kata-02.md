@@ -24,3 +24,7 @@ Complete the following:
 7. Optional - make the data model of the application more robust by introducing unique ids for items. You will have to refactor from simple strings to something more complex.
 8. Optional - connect the persisted state to a database (SQLite or something more complex)
 9. Run the application in a production mode and observe the network tab of the browser inspector
+
+## Notes
+
+* It may be better to separate this as two katas as especially the loader/action portion is challenging.
