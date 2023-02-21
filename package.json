@@ -1,0 +1,23 @@
+{
+  "name": "qwik-katas",
+  "version": "0.0.0",
+  "description": "[Qwik](https://qwik.builder.io/) is what we might call a disappearing web framework. The design aim of the framework is to ship as little JavaScript code as efficiently as possible. In other words, JavaScript should not be loaded unless it is strictly needed. That said, you as a developer have some amount of control over the process. For those that know frameworks like React, Qwik is doing **code splitting** out of the box in a granular manner and you don't have to worry about it. [Qwik City](https://qwik.builder.io/qwikcity/overview/) (\"Next.js\" of Qwik) provides nice and simple ways to interact with a backend though a rpc-style interface not to mention many other features.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/survivejs/qwik-katas.git"
+  },
+  "keywords": [],
+  "author": "Juho Vepsäläinen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/survivejs/qwik-katas/issues"
+  },
+  "homepage": "https://github.com/survivejs/qwik-katas#readme",
+  "devDependencies": {
+    "prettier": "^2.8.4"
+  }
+}
