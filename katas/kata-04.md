@@ -1,6 +1,6 @@
 # Qwik Kata 4 - Routing
 
-The purpose of this kata is to understand how Qwik City routing works and how to define your own routes within the application. The kata assumes you have already completed [kata 3](kata-03.md) so make sure you have done that already.
+The purpose of this kata is to understand how Qwik City routing works and how to define your own routes within the application. The kata assumes you have already completed [kata 3](kata-03.md).
 
 ## Learning aims
 

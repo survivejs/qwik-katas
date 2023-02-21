@@ -1,6 +1,6 @@
 # Qwik Kata 3 - Lifecycle
 
-The purpose of this kata is to get you going with lifecycle of Qwik and understand how they behave in browser and server environments since Qwik covers both. The kata assumes you have already completed [kata 2](kata-02.md) so make sure you have done that already.
+The purpose of this kata is to get you going with lifecycle of Qwik and understand how they behave in browser and server environments since Qwik covers both. The kata assumes you have already completed [kata 2](kata-02.md).
 
 ## Learning aims
 
