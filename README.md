@@ -6,6 +6,14 @@ These Qwik katas have been adapted from [red-gate/web-kata](https://github.com/r
 
 The repository contains `katas` and `solutions`. Each kata comes with a brief description for learning aims, background information, and a task to perform. The katas have been designed to form a continuum so make sure to start from the first one and complete them in a successive manner. Each kata is fairly simple and the goal is to teach a concept per kata to avoid overwhelming anyone.
 
+## Katas
+
+1. [Kata 1 - Introduction to Qwik](katas/kata-01.md) - [Solution](solutions/kata-01)
+2. [Kata 2 - Add and remove objects](katas/kata-02.md) - [Solution](solutions/kata-02)
+3. [Kata 3 - Filter, show and hide objects](katas/kata-03.md) - [Solution](solutions/kata-03)
+4. [Kata 4 - Add router to an app](katas/kata-04.md) - [Solution](solutions/kata-04)
+5. [Kata 5 - Interaction with backend server through REST API calls](katas/kata-05.md) - [Solution](solutions/kata-05)
+
 ## Prerequisites
 
 To be able to complete the katas, you need the following:
