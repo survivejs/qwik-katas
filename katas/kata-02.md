@@ -17,4 +17,6 @@ Complete the following:
 2. Allow the user to add new items to the `Inventory` within the component
 3. Allow the user to remove items from an `Inventory` within the component
 4. Optional - Allow the user to modify items within an `Inventory` within the component
-5. Run the application in a production mode and observe the network tab of the browser inspector
+5. Optional - Try out signals and figure out use cases for them in state management
+6. Optional - Try implementing slots for the `Inventory` component to allow the consumer to inject something to render through it
+7. Run the application in a production mode and observe the network tab of the browser inspector
