@@ -1,26 +1,9 @@
-import { promises as fs } from "fs";
 import { component$ } from "@builder.io/qwik";
-import { loader$ } from "@builder.io/qwik-city";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import Inventory from "../components/inventory/inventory";
+import { useLoadInventory } from "../loaders/use-load-inventory";
 
-export const useLoadInventory = loader$(async () => {
-  console.log("loading inventories");
-
-  try {
-    const inventories = JSON.parse(
-      await fs.readFile("inventory.txt", { encoding: "utf8" })
-    );
-
-    console.log("loaded inventories", inventories);
-
-    return inventories;
-  } catch (error) {
-    console.error("failed to load inventories", error);
-
-    return {};
-  }
-});
+export { useLoadInventory };
 
 export default component$(() => {
   const signal = useLoadInventory();

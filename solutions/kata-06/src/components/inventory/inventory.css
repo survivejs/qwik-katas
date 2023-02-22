@@ -1,0 +1,14 @@
+.inventory {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background: #ddd;
+}
+
+.items {
+  display: flex;
+  gap: 2em;
+}
+
+.add {
+}

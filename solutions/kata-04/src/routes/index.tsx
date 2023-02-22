@@ -5,18 +5,18 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import Inventory from "../components/inventory/inventory";
 
 export const useLoadInventory = loader$(async () => {
-  console.log("loading inventory");
+  console.log("loading inventories");
 
   try {
-    const inventory = JSON.parse(
+    const inventories = JSON.parse(
       await fs.readFile("inventory.txt", { encoding: "utf8" })
     );
 
-    console.log("loaded inventory", inventory);
+    console.log("loaded inventories", inventories);
 
-    return inventory;
+    return inventories;
   } catch (error) {
-    console.error("failed to load inventory", error);
+    console.error("failed to load inventories", error);
 
     return {};
   }
