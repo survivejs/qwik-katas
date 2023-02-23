@@ -17,3 +17,7 @@ Complete the following:
 1. Handle changes made to the `Inventory` store as a side effect with `useTask$`
 2. Optional - Instead of using a loader for initial state, try loading at `useTask$` on the server. Consider why you would use one or the other.
 3. Derive the amount of inventory items dynamically at `useTask$` and show it in the user interface. In this case you could avoid the calculation but it is good to understand how to derive data as this will come up with more complex use cases where you want to retain a single source of truth.
+
+## References
+
+* [Why useEffect May Not Be the Best Abstraction](https://www.builder.io/blog/useeffect-not-the-best-abstraction)
