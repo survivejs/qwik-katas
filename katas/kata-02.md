@@ -15,10 +15,11 @@ Complete the following:
 
 1. Add local state called `items` (an array of strings) to the `Inventory` component. The state can be empty initially.
 2. Allow the user to add new items to the `Inventory` within the component. Hint: You can [use a signal](https://qwik.builder.io/docs/components/overview/#getting-hold-of-dom-element) for storing a reference to the input. Another way would be to track the item to be added using `onInput$` though going through a reference is neater in this case.
-3. Allow the user to remove items from an `Inventory` within the component
-4. Optional - Allow the user to modify items within an `Inventory` within the component
-5. Optional - Try implementing [slots](https://qwik.builder.io/docs/components/projection/) for the `Inventory` component to allow the consumer to inject the component styling. This type of API design can lead to headless components that are flexible to use.
-6. Run the application in a production mode and observe the network tab of the browser inspector
+3. Optional - After adding a new item, reset the related input that contained the value to add
+4. Allow the user to remove items from an `Inventory` within the component
+5. Optional - Allow the user to modify items within an `Inventory` within the component
+6. Optional - Try implementing [slots](https://qwik.builder.io/docs/components/projection/) for the `Inventory` component to allow the consumer to inject the component styling. This type of API design can lead to headless components that are flexible to use.
+7. Run the application in a production mode and observe the network tab of the browser inspector
 
 ## Navigation
 
