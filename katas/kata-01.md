@@ -26,3 +26,8 @@ Complete the following:
 6. Render the `Inventory` component twice
 7. Parametrize the `Inventory` component so that you can pass a `title` string to it and render the passed string instead of the mock text
 8. Render another `Inventory` component with a different `title`
+
+## Navigation
+
+* [Previous kata](./kata-01.md)
+* [Next kata](./kata-02.md)

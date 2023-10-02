@@ -20,3 +20,8 @@ Complete the following:
 5. Optional - Try out signals and figure out use cases for them in state management
 6. Optional - Try implementing [slots](https://qwik.builder.io/docs/components/projection/) for the `Inventory` component to allow the consumer to inject the component styling
 7. Run the application in a production mode and observe the network tab of the browser inspector
+
+## Navigation
+
+* [Previous kata](./kata-01.md)
+* [Next kata](./kata-03.md)
