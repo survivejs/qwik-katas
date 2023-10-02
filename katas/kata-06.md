@@ -21,3 +21,8 @@ Complete the following:
 4. Optional - Show the available pages as breadcrumbs at the site footer
 5. Optional - Set up a `/blog` and author a page using mdx about your collection management system
 6. Optional - Include a sample inventory to the mdx content of the page you just added to demonstrate the system
+
+## Navigation
+
+* [Previous kata](./kata-05.md)
+* [Next kata](./kata-06.md)

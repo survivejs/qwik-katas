@@ -20,3 +20,8 @@ Complete the following:
 5. Optional - Try using [zod](https://qwik.builder.io/qwikcity/action/#zod-validation) for data validation. Can you see the benefit?
 6. Optional - Make the data model of the application more robust by introducing unique ids for items. You will have to refactor from simple strings to something more complex.
 7. Optional - Connect the persisted state to a database (SQLite or something more complex)
+
+## Navigation
+
+* [Previous kata](./kata-02.md)
+* [Next kata](./kata-04.md)

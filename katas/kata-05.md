@@ -21,3 +21,9 @@ Complete the following:
 ## References
 
 * [Why useEffect May Not Be the Best Abstraction](https://www.builder.io/blog/useeffect-not-the-best-abstraction)
+
+## Navigation
+
+* [Previous kata](./kata-04.md)
+* [Next kata](./kata-06.md)
+

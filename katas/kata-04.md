@@ -19,3 +19,9 @@ Complete the following:
 1. Style the `Inventory` component using scoped styles. Hint: Look up `useStylesScoped$`.
 2. Style the `Inventory` component using [Tailwind](https://qwik.builder.io/integrations/integration/tailwind/)
 3. Optional - Style the `Inventory` component using [styled-vanilla-extract](https://qwik.builder.io/integrations/integration/styled-vanilla-extract/)
+
+## Navigation
+
+* [Previous kata](./kata-03.md)
+* [Next kata](./kata-05.md)
+
