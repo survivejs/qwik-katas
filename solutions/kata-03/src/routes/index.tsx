@@ -1,43 +1,53 @@
 import { promises as fs } from "fs";
-import { component$ } from "@builder.io/qwik";
-import { loader$ } from "@builder.io/qwik-city";
+import { component$, $ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import Inventory from "../components/inventory/inventory";
+import { routeAction$, routeLoader$ } from "@builder.io/qwik-city";
+import Inventory, { type Items } from "../components/inventory/inventory";
 
-export const useLoadInventory = loader$(async () => {
-  console.log("loading inventories");
+export const useInventory = routeLoader$(async () => {
+  try {
+    const inventory = JSON.parse(
+      await fs.readFile("inventory.txt", { encoding: "utf8" }),
+    ) as string[];
+
+    return inventory;
+  } catch (error) {
+    console.error("Failed to load inventory");
+  }
+
+  return [];
+});
+
+export const useSetInventory = routeAction$(async (items) => {
+  console.log("write to fs now", items);
 
   try {
-    const inventories = JSON.parse(
-      await fs.readFile("inventory.txt", { encoding: "utf8" })
-    );
-
-    console.log("loaded inventories", inventories);
-
-    return inventories;
+    await fs.writeFile("inventory.txt", JSON.stringify(items, null, 2), "utf8");
   } catch (error) {
-    console.error("failed to load inventories", error);
+    console.error("Failed to write inventory");
 
-    return {};
+    return {
+      success: false,
+    };
   }
+
+  return {
+    success: true,
+  };
 });
 
 export default component$(() => {
-  const signal = useLoadInventory();
+  const initialItems = useInventory();
+  const setInventory = useSetInventory();
 
   return (
-    <div>
+    <>
       <Inventory
-        id="livingRoom"
-        title="living room"
-        items={signal.value?.livingRoom || []}
+        title="Socks"
+        initialItems={initialItems.value}
+        onItemsChanged={$((inventory: Items) => setInventory.submit(inventory))}
       />
-      <Inventory
-        id="kitchen"
-        title="kitchen"
-        items={signal.value?.kitchen || []}
-      />
-    </div>
+    </>
   );
 });
 

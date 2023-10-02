@@ -1,81 +1,63 @@
-import { promises as fs } from "fs";
-import { component$, useStore } from "@builder.io/qwik";
-import { action$ } from "@builder.io/qwik-city";
+import { component$, useSignal, useTask$, $, type QRL } from "@builder.io/qwik";
+import { isServer } from "@builder.io/qwik/build";
 
-export const useSetInventory = action$(async ({ id, items }) => {
-  console.log("starting to set inventory", id, items);
-
-  try {
-    let fullInventory = {};
-
-    // If there is existing inventory, read it first
-    try {
-      const inventory = JSON.parse(
-        await fs.readFile("inventory.txt", { encoding: "utf8" })
-      );
-
-      fullInventory = inventory;
-    } catch (error) {}
-
-    console.log("existing inventory", fullInventory);
-    console.log("writing inventory");
-
-    await fs.writeFile(
-      "inventory.txt",
-      // TODO: Is there a better way to type the id?
-      JSON.stringify({ ...fullInventory, [id as string]: items }, null, 2),
-      "utf8"
-    );
-
-    return {
-      success: true,
-    };
-  } catch (error) {
-    return {
-      success: false,
-    };
-  }
-});
+export type Items = string[];
 
 export default component$(
-  ({ id, title, items }: { id: string; title: string; items: string[] }) => {
-    const store = useStore<{ itemToAdd: string; items: string[] }>({
-      itemToAdd: "",
-      items,
-    });
-    const action = useSetInventory();
+  ({
+    title,
+    initialItems,
+    onItemsChanged,
+  }: {
+    title: string;
+    initialItems: Items;
+    onItemsChanged: QRL<(items: Items) => unknown>;
+  }) => {
+    const items = useSignal<string[]>(initialItems);
+    const inputRef = useSignal<HTMLInputElement>();
+    const amountOfItems = useSignal<number>(initialItems.length);
 
-    // TODO: How to type onInput$ correctly?
+    // Expose changes to items through a callback
+    useTask$(({ track }) => {
+      track(() => items.value);
+
+      if (!isServer) {
+        amountOfItems.value = items.value.length;
+
+        onItemsChanged(items.value);
+      }
+    });
+
     return (
       <div>
-        <div>{title}</div>
-        <ul>
-          {store.items.map((item, i) => (
-            <li>
-              {item}
-              <span> </span>
-              <button
-                onClick$={() => {
-                  store.items = store.items
-                    .slice(0, i)
-                    .concat(store.items.slice(i + 1));
-                  action.run({ id, items: store.items });
-                }}
-              >
-                &#10006;
-              </button>
-            </li>
-          ))}
-        </ul>
         <div>
-          <input
-            type="text"
-            onInput$={(e) => (store.itemToAdd = e.target?.value)}
-          />
+          {title} (items: {amountOfItems})
+        </div>
+        <div>{items}</div>
+        <div>
+          <label>Add a new item</label>
+          <input type="text" ref={inputRef}></input>
           <button
+            type="submit"
             onClick$={() => {
-              store.items = store.items.concat(store.itemToAdd);
-              action.run({ id, items: store.items });
+              const $input = inputRef.value;
+
+              if (!$input) {
+                return;
+              }
+
+              const newItem = $input.value;
+
+              if (newItem) {
+                items.value = items.value.concat(newItem);
+
+                // This won't work because it's a proxy underneath
+                // (reference does not change)
+                // items.value.push(newItem);
+
+                // Reset input value
+                $input.value = "";
+              }
             }}
           >
             Add item
@@ -83,5 +65,5 @@ export default component$(
         </div>
       </div>
     );
-  }
+  },
 );
