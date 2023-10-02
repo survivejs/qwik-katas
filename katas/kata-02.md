@@ -14,7 +14,7 @@ The idea here is to build up a data model of the application and cover the follo
 Complete the following:
 
 1. Add local state called `items` (an array of strings) to the `Inventory` component. The state can be empty initially.
-2. Allow the user to add new items to the `Inventory` within the component. Hint: You can [use a signal](https://qwik.builder.io/docs/components/overview/#getting-hold-of-dom-element) for storing a reference to the input. Another way would be to track its value using `onInput$` though going through a reference is neater in this case. Can you see when you would use one or the other?
+2. Allow the user to add new items to the `Inventory` within the component. Hint: You can [use a signal](https://qwik.builder.io/docs/components/overview/#getting-hold-of-dom-element) for storing a reference to the input. Another way would be to track its value using `onInput$` though going through a reference is neater in this case. Another good option is to [leverage a Form](https://qwik.builder.io/docs/integrations/modular-forms/) as that would be semantically correct as well.
 3. Allow the user to remove items from an `Inventory` within the component
 4. Optional - Allow the user to modify items within an `Inventory` within the component
 5. Optional - Try out signals and figure out use cases for them in state management
