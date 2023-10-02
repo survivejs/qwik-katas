@@ -1,29 +1,28 @@
-# Qwik Kata 5 - Lifecycle
+# Qwik Kata 5 - Routing
 
-The purpose of this kata is to get you going with lifecycle of Qwik and understand how they behave in browser and server environments since Qwik covers both. The kata assumes you have already completed [kata 4](kata-04.md).
+The purpose of this kata is to understand how Qwik City routing works and how to define your own routes within the application. The kata assumes you have already completed [kata 5](kata-05.md).
 
 ## Learning aims
 
 The idea here is to understand the following:
 
-* When and why to use Qwik lifecycle
-* Learn how Qwik lifecycle is triggered on the server and the client
-* How to derive state and why that is preferable when possible
+* Creating new routes
+* Leveraging nested layouts
+* Adding breadcrumbs
+* Authoring with mdx
 
 ## Task
 
 Complete the following:
 
-1. Handle changes made to the `Inventory` store as a side effect with `useTask$`
-2. Optional - Instead of using a loader for initial state, try loading at `useTask$` on the server. Consider why you would use one or the other.
-3. Derive the amount of inventory items dynamically at `useTask$` and show it in the user interface. In this case you could avoid the calculation but it is good to understand how to derive data as this will come up with more complex use cases where you want to retain a single source of truth.
-
-## References
-
-* [Why useEffect May Not Be the Best Abstraction](https://www.builder.io/blog/useeffect-not-the-best-abstraction)
+1. Create a new route to show all collections at once (i.e., `/inventories`)
+2. Extract a `useLoadInventory` helper from the new route
+3. Allow accessing individual collections using a specific url (i.e., `/inventories/home`)
+4. Optional - Show the available pages as breadcrumbs at the site footer
+5. Optional - Set up a `/blog` and author a page using mdx about your collection management system
+6. Optional - Include a sample inventory to the mdx content of the page you just added to demonstrate the system
 
 ## Navigation
 
 * [Previous kata](./kata-04.md)
-* [Next kata](./kata-06.md)
-
+* [Next kata](./kata-05.md)
