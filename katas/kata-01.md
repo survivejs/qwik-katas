@@ -24,8 +24,7 @@ Complete the following:
 4. Create a new component called `Inventory` and render a mock text (say "inventory goes here") through it
 5. Render the new `Inventory` component through the application
 6. Render the `Inventory` component twice
-7. Parametrize the `Inventory` component so that you can pass a `title` string to it and render the passed string instead of the mock text
-8. Render another `Inventory` component with a different `title`
+7. Parametrize the `Inventory` component so that you can pass a `title` string to it and render the passed string instead of the mock text and define titles for the inventories
 
 ## Navigation
 
